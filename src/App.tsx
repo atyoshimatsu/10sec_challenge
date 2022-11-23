@@ -9,7 +9,7 @@ function App(): JSX.Element {
   return (
     <>
 			<div className='clock'>
-				<Clock />
+				<Clock time={state.time} />
 				<Button isStarted={state.isStarted} setIsStarted={setIsStarted}/>
 			</div>
     </>

@@ -1,10 +1,11 @@
 import React from 'react'
+import { ClockProps } from '../interfaces/interface';
 
-const Clock = ():JSX.Element => {
-  const time = '10:00';
+const Clock = (props: ClockProps):JSX.Element => {
+  const { time } = props;
   return (
     <div className='clock-time'>
-      {time}
+      {time ?? '00:00'}
     </div>
   );
 }
