@@ -2,15 +2,16 @@ import React from "react";
 
 export const SET_IS_STARTED = 'SET_IS_STARTED';
 export const SET_RESULT = 'SET_RESULT';
-export const SET_TIMER = 'SET_TIMER';
+export const SET_TIME = 'SET_TIME';
 
-export type SetState= 'SET_IS_STARTED' | 'SET_RESULT' | 'SET_TIMER';
+export type SetState= 'SET_IS_STARTED' | 'SET_RESULT' | 'SET_TIME';
 export type Result = undefined | 'success' | 'fail';
 
 export interface State {
   isStarted: boolean,
   result: Result,
   time?: string,
+  startTime: number;
 }
 
 export interface Action {
