@@ -6,7 +6,7 @@ const Button = (props: ButtonProps):JSX.Element => {
   return (
     <button
       className='clock-button'
-      onClick={() => setIsStarted({type: SET_IS_STARTED})}
+      onMouseDown={() => setIsStarted({type: SET_IS_STARTED})}
     >
       {isStarted ? 'Stop' : 'Start'}
     </button>
