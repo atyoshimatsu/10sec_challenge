@@ -8,3 +8,10 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.clock-time {
+  width: 200px;
+  font-size: 60px;
+  display: flex;
+  justify-content: space-around;
+}
