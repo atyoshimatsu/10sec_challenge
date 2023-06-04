@@ -50,9 +50,9 @@ const useApplicationData = () => {
       }
 
       if (!state.isStarted && Number(state.time) > 9.94 && Number(state.time) < 10.06) {
-        result = 'success';
+        result = 'SUCCESS';
       } else {
-        result = 'fail';
+        result = 'FAIL';
       }
       return dispatch({ type: SET_STATE.RESULT, result });
     }
