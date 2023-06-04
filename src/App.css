@@ -15,3 +15,11 @@
   display: flex;
   justify-content: space-around;
 }
+
+.clock-button {
+  width: 200px;
+  font-size: 24px;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
