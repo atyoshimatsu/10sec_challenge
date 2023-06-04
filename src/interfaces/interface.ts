@@ -6,7 +6,7 @@ export enum SET_STATE {
   TIME = 'TIME',
 }
 
-export type Result = undefined | 'success' | 'fail';
+export type Result = undefined | 'SUCCESS' | 'FAIL';
 
 export interface State {
   isStarted: boolean,
