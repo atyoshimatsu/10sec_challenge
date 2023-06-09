@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ButtonProps, SET_STATE } from '../interfaces/interface';
 
 const Button = (props: ButtonProps):JSX.Element => {
@@ -11,6 +11,6 @@ const Button = (props: ButtonProps):JSX.Element => {
       {isStarted ? 'STOP' : 'START'}
     </button>
   );
-}
+};
 
 export default Button;

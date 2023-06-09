@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { ClockProps } from '../interfaces/interface';
 
 const Clock = (props: ClockProps):JSX.Element => {
   const { time } = props;
-  const time1 = !!time ? time.split('')[0] : '0';
-  const time2 = !!time ? time.split('')[1] : '0';
-  const time3 = !!time ? time.split('')[3] : '0';
-  const time4 = !!time ? time.split('')[4] : '0';
+  const time1 = time ? time.split('')[0] : '0';
+  const time2 = time ? time.split('')[1] : '0';
+  const time3 = time ? time.split('')[3] : '0';
+  const time4 = time ? time.split('')[4] : '0';
 
   return (
     <div className='clock-time'>
@@ -19,6 +19,6 @@ const Clock = (props: ClockProps):JSX.Element => {
       </div>
     </div>
   );
-}
+};
 
 export default Clock;

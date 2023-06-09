@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react'
+import { useEffect, useReducer } from 'react';
 import { State, Action, SET_STATE, Result } from "../interfaces/interface";
 
 const useApplicationData = () => {
@@ -10,21 +10,21 @@ const useApplicationData = () => {
           isStarted: !state.isStarted,
           result: undefined,
           startTime: Date.now(),
-        }
+        };
       case SET_STATE.RESULT:
         return {
           ...state,
           result: action.result,
-        }
+        };
       case SET_STATE.TIME:
         return {
           ...state,
           time: action.time,
-        }
+        };
       default:
         throw new Error(`Tried to reduce with unsupported action type: ${action.type}`);
     }
-  }
+  };
 
   const setIsStarted = () => dispatch({ type: SET_STATE.IS_STARTED });
 
@@ -55,7 +55,7 @@ const useApplicationData = () => {
         result = 'FAIL';
       }
       return dispatch({ type: SET_STATE.RESULT, result });
-    }
+    };
     setResult();
     return () => clearInterval(timer);
   }, [state.isStarted, state.startTime, state.time]);
@@ -63,7 +63,7 @@ const useApplicationData = () => {
   return {
     state,
     setIsStarted,
-  }
-}
+  };
+};
 
 export default useApplicationData;

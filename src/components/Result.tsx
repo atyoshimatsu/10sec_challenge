@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ResultProps } from '../interfaces/interface';
 
 const Result = (props: ResultProps):JSX.Element => {
@@ -8,6 +8,6 @@ const Result = (props: ResultProps):JSX.Element => {
       {result}
     </div>
   );
-}
+};
 
 export default Result;
