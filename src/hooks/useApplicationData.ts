@@ -26,14 +26,14 @@ const useApplicationData = () => {
     }
   };
 
-  const setIsStarted = () => dispatch({ type: SET_STATE.IS_STARTED });
-
   const [state, dispatch] = useReducer(reducer,{
     isStarted: false,
     result: undefined,
     time: undefined,
     startTime: Date.now(),
   });
+
+  const setIsStarted = () => dispatch({ type: SET_STATE.IS_STARTED });
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -44,7 +44,7 @@ const useApplicationData = () => {
     }, 10);
 
     const setResult = () => {
-      let result: Result = undefined;
+      let result: Result;
       if (state.isStarted || !state.time) {
         return dispatch({ type: SET_STATE.RESULT, result });
       }
